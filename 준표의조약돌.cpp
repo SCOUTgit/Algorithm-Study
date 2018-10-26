@@ -1,53 +1,40 @@
 #include <iostream>
+#include <queue>
 
-class stone {
-private:
-	int Bn;
-	int Wn;
-	char *color;
-public:
-	stone(char *CA,int nb,int nw) {
-		this->color = CA;
-		this->Bn = nb;
-		this->Wn = nw;
-	}
+char stone[300000];	//돌 패턴
 
-};
+int MaxLength(int N, int B, int W) {
+	int length = 0, BN = 0, WN = 0;	// 길이, 검은 돌의 개수, 하얀 돌의 개수
+	std::queue<char> q;
+	for (long i = 0; i < N; i++) {
+		if (stone[i] == 'W')
+			WN++;
+		else
+			BN++;
 
-int main() {
-	int N, B, W;
-
-	std::cin >> N >> B >> W;
-
-	char *ca = new char[N];	//돌 패턴
-
-	int nb = 0, nw = 0, Sn = 0;	//흑돌 개수, 백돌 개수, 총 길이
-
-	for (int i = 0; i < N; i++) {
-		std::cin >> ca[i];
-		switch (ca[i])
-		{
-		case 'B':
-			nb++;
-			break;
-		case 'W':
-			nw++;
-			break;
-		default:
-			break;
+		q.push(stone[i]);
+		
+		if (length < q.size() && WN >= W && BN <= B)
+			length = q.size();
+		while (BN > B) {
+			if (q.front() == 'W')
+				WN--;
+			else
+				BN--;
+			q.pop();
 		}
 	}
 
-	stone *st = new stone(ca, nb, nw);
+	return length;
+}
 
-	for (int i = 0; i < N; i++) {
-		
-	}
+int main() {
+	int N, B, W;	// 갯수, 최대 검정, 최소 하양
+	std::cin >> N >> B >> W;
+	for (int i = 0; i < N; i++)
+		std::cin >> stone[i];
 
-	std::cout << Sn << std::endl;
-
-	delete[] ca;
-	delete st;
+	std::cout << MaxLength(N, B, W);
 
 	return 0;
 }

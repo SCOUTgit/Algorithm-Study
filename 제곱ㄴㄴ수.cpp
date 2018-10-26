@@ -1,49 +1,26 @@
 #include <iostream>
-#include <math.h>
-#include <time.h>
 
-int num[1000000];
-int prime[100000];
-
-
-int sqr(int n) { return n*n; }
+bool num[1000001];
 
 int main() {
-	long long int min, max, total;			// max, min
-	int pn = 0; // 소수갯수, 제곱ㄴㄴ수의 갯수
-	int overlap=0;
-
-	std::cin >> min >> max;
-	total = max - min + 1;
+	long long int min, max;	// min, max
+	std::cin >> min >> max;	// min과 max를 입력받는다.
 	
-	for (int i = 0; i < sqrt(max); i++)
-		num[i] = i + 1;
-
-	for (int i = 1; i < sqrt(max); i++) {
-		if (num[i] == 0) { continue; }
-		for (int j = num[i]*2; j <= sqrt(max)+10; j+=num[i]) {	num[j-1] = 0; }
-	}
-	for (int i = 1; i < sqrt(max); i++) {
-		if (num[i] != 0) {prime[pn++] = num[i];}
+	// 제곱수가 max보다 커질 때 만큼 돌린다.
+	for (long long i = 2; i * i <= max; i++) 
+	{
+		long long start = min / (i * i);	// start는 min에서 완전제곱수로 나눠지는 작은 수이다.
+		if (start * i * i != min)start++;	// 가장 작은 제곱수가 min보다 작으면 start에 1을 더한다.
+		for (long long j = start; i * i * j <= max; j++)	// i의 제곱과 j를 곱해서 제곱수를 찾아서 true로 변환해준다.
+			num[i * i * j - min] = true;
 	}
 
-	std::cout << pn << std::endl;
-	
-	for (int i = 0; i < pn; i++) {
-		overlap = 0;
-		for (int j = i+1; j < pn; j++) {
-			if (prime[i] * prime[j] <= sqrt(max)) {
-				overlap += (max / sqr(prime[j])) / sqr(prime[i]);
-				overlap -= (min / sqr(prime[i])) / sqr(prime[i]);
-			}
-			else{break;}
-		}
-		std::cout << total << "-" << max / sqr(prime[i]) << "+" << (min - 1) / sqr(prime[i]) << "+" << overlap << std::endl;
+	int count = 0;
+	for (int i = 0; i < max - min + 1; i++)
+		if (!num[i])count++;
 
-		total = total - max / sqr(prime[i]) + (min-1)/sqr(prime[i]) + overlap;
-	}
-
-	std::cout << total << std::endl;
-
+	std::cout << count;
 	return 0;
 }
+
+// 참조 자료 : http://deque.tistory.com/76
