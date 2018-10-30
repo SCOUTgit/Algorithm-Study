@@ -1,3 +1,3 @@
-﻿  준표의조약돌.cpp
-c:\users\aero14\documents\algorithm-study\준표의조약돌.cpp(17): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+﻿  수묶기.cpp
+c:\users\aero14\documents\algorithm-study\수묶기.cpp(11): warning C4715: 'compare': 모든 제어 경로에서 값을 반환하지는 않습니다.
   Algorithm Study.vcxproj -> C:\Users\AERO14\Documents\Algorithm-Study\Debug\Algorithm Study.exe
