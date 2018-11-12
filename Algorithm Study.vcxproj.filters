@@ -24,5 +24,8 @@
     <ClCompile Include="1로만들기.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="회의실 배정.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
