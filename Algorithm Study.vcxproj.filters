@@ -24,7 +24,14 @@
     <ClCompile Include="1로만들기.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="회의실 배정.cpp">
+=======
+    <ClCompile Include="동전0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="수묶기.cpp">
+>>>>>>> master
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
