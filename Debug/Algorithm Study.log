@@ -1,8 +1,2 @@
-<<<<<<< HEAD
-﻿  회의실 배정.cpp
+﻿  행렬.cpp
   Algorithm Study.vcxproj -> C:\Users\dsm2017\Documents\Algorithm-Study\Debug\Algorithm Study.exe
-=======
-﻿  수묶기.cpp
-c:\users\aero14\documents\algorithm-study\수묶기.cpp(11): warning C4715: 'compare': 모든 제어 경로에서 값을 반환하지는 않습니다.
-  Algorithm Study.vcxproj -> C:\Users\AERO14\Documents\Algorithm-Study\Debug\Algorithm Study.exe
->>>>>>> master
