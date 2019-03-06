@@ -13,5 +13,6 @@
     <ClCompile Include="4X4미로찾기.cpp" />
     <ClCompile Include="행렬.cpp" />
     <ClCompile Include="경사로.cpp" />
+    <ClCompile Include="램프.cpp" />
   </ItemGroup>
 </Project>
