@@ -14,5 +14,8 @@
     <ClCompile Include="행렬.cpp" />
     <ClCompile Include="경사로.cpp" />
     <ClCompile Include="램프.cpp" />
+    <ClCompile Include="스택.cpp" />
+    <ClCompile Include="괄호.cpp" />
+    <ClCompile Include="쇠파이프.cpp" />
   </ItemGroup>
 </Project>
