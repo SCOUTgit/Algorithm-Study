@@ -17,5 +17,6 @@
     <ClCompile Include="스택.cpp" />
     <ClCompile Include="괄호.cpp" />
     <ClCompile Include="쇠파이프.cpp" />
+    <ClCompile Include="게임.cpp" />
   </ItemGroup>
 </Project>
