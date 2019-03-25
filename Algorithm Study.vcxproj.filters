@@ -18,5 +18,11 @@
     <ClCompile Include="괄호.cpp" />
     <ClCompile Include="쇠파이프.cpp" />
     <ClCompile Include="게임.cpp" />
+    <ClCompile Include="에디터.cpp" />
+    <ClCompile Include="프로그래머스.cpp" />
+    <ClCompile Include="타일채우기3.cpp" />
+    <ClCompile Include="설탕배달.cpp" />
+    <ClCompile Include="큐.cpp" />
+    <ClCompile Include="1,2,3 더하기.cpp" />
   </ItemGroup>
 </Project>
