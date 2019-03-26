@@ -24,5 +24,6 @@
     <ClCompile Include="설탕배달.cpp" />
     <ClCompile Include="큐.cpp" />
     <ClCompile Include="1,2,3 더하기.cpp" />
+    <ClCompile Include="조세퍼스 문제.cpp" />
   </ItemGroup>
 </Project>
